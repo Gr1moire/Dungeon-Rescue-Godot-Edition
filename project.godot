@@ -42,6 +42,10 @@ config/name="Dungeon Rescue Godot Edition"
 run/main_scene="res://Levels/Node2D.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+PlayerVariables="*res://PlayerVariables.gd"
+
 [display]
 
 window/size/width=410

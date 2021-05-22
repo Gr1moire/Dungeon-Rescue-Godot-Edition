@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Tilesets/tile_map_world_trans.png" type="Texture" id=1]
 [ext_resource path="res://Players/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Mates/Mate1.png" type="Texture" id=3]
+[ext_resource path="res://Levels/level1.gd" type="Script" id=4]
+[ext_resource path="res://Mates/Mate1.gd" type="Script" id=5]
+[ext_resource path="res://Players/Player.gd" type="Script" id=6]
+[ext_resource path="res://Music and Sounds/lvl1tuto.ogg" type="AudioStream" id=7]
 
-[sub_resource type="TileSet" id=2]
+[sub_resource type="TileSet" id=1]
 2/name = "tile_map_world_trans.png 2"
 2/texture = ExtResource( 1 )
 2/tex_offset = Vector2( 0, 0 )
@@ -42,7 +47,7 @@
 4/name = "tile_map_world_trans.png 4"
 4/texture = ExtResource( 1 )
 4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
+4/modulate = Color( 0.501961, 0.372549, 0.301961, 1 )
 4/region = Rect2( 144, 288, 16, 24 )
 4/tile_mode = 0
 4/occluder_offset = Vector2( 0, 0 )
@@ -75,52 +80,56 @@
 5/shapes = [  ]
 5/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 23.864, 11.8314 )
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 7.39072, 10 )
+
+[node name="Level1" type="Node2D"]
 position = Vector2( 0.0480347, -5.656 )
+script = ExtResource( 4 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( -79.6554, -166.466 )
 
 [node name="TileMap" type="TileMap" parent="StaticBody2D"]
-tile_set = SubResource( 2 )
+tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 24 )
 format = 1
 tile_data = PoolIntArray( 458757, 2, 0, 458758, 2, 0, 458759, 2, 0, 458760, 2, 0, 458761, 2, 0, 458762, 2, 0, 458763, 2, 0, 458764, 2, 0, 458765, 2, 0, 458766, 2, 0, 458767, 2, 0, 458768, 2, 0, 458769, 2, 0, 458770, 2, 0, 458771, 2, 0, 458772, 2, 0, 458773, 2, 0, 458774, 2, 0, 458775, 2, 0, 458776, 2, 0, 458777, 2, 0, 458778, 2, 0, 458779, 2, 0, 458780, 2, 0, 458781, 2, 0, 458782, 2, 0, 524293, 2, 0, 524294, 2, 0, 524295, 3, 7, 524296, 3, 0, 524297, 3, 0, 524298, 3, 7, 524299, 4, 0, 524300, 4, 0, 524301, 3, 7, 524302, 3, 0, 524303, 3, 0, 524304, 3, 7, 524305, 2, 0, 524306, 2, 0, 524307, 3, 7, 524308, 3, 0, 524309, 3, 0, 524310, 3, 7, 524311, 4, 0, 524312, 4, 0, 524313, 3, 0, 524314, 3, 0, 524315, 3, 0, 524316, 3, 7, 524317, 2, 0, 524318, 2, 0, 589829, 2, 0, 589830, 2, 0, 589831, 3, 7, 589832, 2, 0, 589833, 2, 0, 589834, 3, 7, 589835, 4, 0, 589836, 4, 0, 589837, 3, 7, 589838, 2, 0, 589839, 2, 0, 589840, 3, 7, 589841, 2, 0, 589842, 2, 0, 589843, 3, 7, 589844, 2, 0, 589845, 2, 0, 589846, 3, 7, 589847, 4, 0, 589848, 4, 0, 589849, 4, 0, 589850, 2, 0, 589851, 2, 0, 589852, 3, 7, 589853, 2, 0, 589854, 2, 0, 655365, 2, 0, 655366, 2, 0, 655367, 3, 7, 655368, 2, 0, 655369, 2, 0, 655370, 3, 7, 655371, 4, 0, 655372, 4, 0, 655373, 3, 7, 655374, 2, 0, 655375, 2, 0, 655376, 3, 7, 655377, 2, 0, 655378, 2, 0, 655379, 3, 7, 655380, 2, 0, 655381, 2, 0, 655382, 3, 7, 655383, 4, 0, 655384, 4, 0, 655385, 4, 0, 655386, 2, 0, 655387, 2, 0, 655388, 3, 7, 655389, 2, 0, 655390, 2, 0, 720901, 2, 0, 720902, 2, 0, 720903, 3, 7, 720904, 3, 0, 720905, 3, 0, 720906, 3, 0, 720907, 4, 0, 720908, 4, 0, 720909, 3, 0, 720910, 3, 0, 720911, 3, 0, 720912, 3, 7, 720913, 2, 0, 720914, 2, 0, 720915, 3, 7, 720916, 3, 0, 720917, 3, 0, 720918, 3, 0, 720919, 4, 0, 720920, 4, 0, 720921, 4, 0, 720922, 3, 65542, 720923, 3, 65542, 720924, 3, 7, 720925, 2, 0, 720926, 2, 0, 786437, 2, 0, 786438, 2, 0, 786439, 3, 7, 786440, 4, 0, 786441, 4, 0, 786442, 4, 0, 786443, 4, 0, 786444, 4, 0, 786445, 4, 0, 786446, 4, 0, 786447, 4, 0, 786448, 3, 7, 786449, 2, 0, 786450, 2, 0, 786451, 3, 7, 786452, 4, 0, 786453, 4, 0, 786454, 4, 0, 786455, 4, 0, 786456, 4, 0, 786457, 4, 0, 786458, 4, 0, 786459, 4, 0, 786460, 3, 7, 786461, 2, 0, 786462, 2, 0, 851973, 2, 0, 851974, 2, 0, 851975, 3, 7, 851976, 3, 65542, 851977, 3, 65542, 851978, 3, 65542, 851979, 4, 0, 851980, 3, 65542, 851981, 3, 65542, 851982, 3, 65542, 851983, 4, 0, 851984, 3, 7, 851985, 2, 0, 851986, 2, 0, 851987, 3, 7, 851988, 4, 0, 851989, 4, 0, 851990, 4, 0, 851991, 4, 0, 851992, 4, 0, 851993, 3, 65542, 851994, 3, 65542, 851995, 3, 65542, 851996, 3, 7, 851997, 2, 0, 851998, 2, 0, 917509, 2, 0, 917510, 2, 0, 917511, 3, 7, 917512, 4, 0, 917513, 4, 0, 917514, 4, 0, 917515, 4, 0, 917516, 4, 0, 917517, 4, 0, 917518, 4, 0, 917519, 4, 0, 917520, 3, 7, 917521, 2, 0, 917522, 2, 0, 917523, 3, 7, 917524, 3, 65542, 917525, 3, 65542, 917526, 3, 65542, 917527, 4, 0, 917528, 4, 0, 917529, 4, 0, 917530, 4, 0, 917531, 4, 0, 917532, 3, 7, 917533, 2, 0, 917534, 2, 0, 983045, 2, 0, 983046, 2, 0, 983047, 3, 7, 983048, 4, 0, 983049, 4, 0, 983050, 4, 0, 983051, 4, 0, 983052, 4, 0, 983053, 3, 65542, 983054, 3, 65542, 983055, 3, 65542, 983056, 3, 7, 983057, 2, 0, 983058, 2, 0, 983059, 3, 7, 983060, 4, 0, 983061, 4, 0, 983062, 4, 0, 983063, 4, 0, 983064, 4, 0, 983065, 3, 65542, 983066, 3, 65542, 983067, 3, 65542, 983068, 3, 7, 983069, 2, 0, 983070, 2, 0, 1048581, 2, 0, 1048582, 2, 0, 1048583, 3, 7, 1048584, 4, 0, 1048585, 3, 65542, 1048586, 3, 65542, 1048587, 3, 65542, 1048588, 4, 0, 1048589, 4, 0, 1048590, 4, 0, 1048591, 4, 0, 1048592, 3, 7, 1048593, 2, 0, 1048594, 2, 0, 1048595, 3, 7, 1048596, 4, 0, 1048597, 4, 0, 1048598, 3, 65542, 1048599, 3, 65542, 1048600, 3, 65542, 1048601, 4, 0, 1048602, 4, 0, 1048603, 4, 0, 1048604, 3, 7, 1048605, 2, 0, 1048606, 2, 0, 1114117, 2, 0, 1114118, 2, 0, 1114119, 3, 7, 1114120, 4, 0, 1114121, 4, 0, 1114122, 4, 0, 1114123, 4, 0, 1114124, 4, 0, 1114125, 4, 0, 1114126, 4, 0, 1114127, 4, 0, 1114128, 3, 7, 1114129, 2, 0, 1114130, 2, 0, 1114131, 3, 7, 1114132, 4, 0, 1114133, 4, 0, 1114134, 4, 0, 1114135, 4, 0, 1114136, 4, 0, 1114137, 4, 0, 1114138, 4, 0, 1114139, 4, 0, 1114140, 3, 7, 1114141, 2, 0, 1114142, 2, 0, 1179653, 2, 0, 1179654, 2, 0, 1179655, 3, 0, 1179656, 3, 0, 1179657, 3, 0, 1179658, 3, 0, 1179659, 3, 0, 1179660, 5, 65538, 1179661, 3, 0, 1179662, 3, 0, 1179663, 3, 0, 1179664, 3, 0, 1179665, 2, 0, 1179666, 2, 0, 1179667, 3, 0, 1179668, 3, 0, 1179669, 3, 0, 1179670, 3, 0, 1179671, 3, 0, 1179672, 5, 65538, 1179673, 3, 0, 1179674, 3, 0, 1179675, 3, 0, 1179676, 3, 0, 1179677, 2, 0, 1179678, 2, 0, 1245189, 2, 0, 1245190, 2, 0, 1245191, 2, 0, 1245192, 2, 0, 1245193, 2, 0, 1245194, 2, 0, 1245195, 2, 0, 1245196, 2, 0, 1245197, 2, 0, 1245198, 2, 0, 1245199, 2, 0, 1245200, 2, 0, 1245201, 2, 0, 1245202, 2, 0, 1245203, 2, 0, 1245204, 2, 0, 1245205, 2, 0, 1245206, 2, 0, 1245207, 2, 0, 1245208, 2, 0, 1245209, 2, 0, 1245210, 2, 0, 1245211, 2, 0, 1245212, 2, 0, 1245213, 2, 0, 1245214, 2, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 151.159, 323.882 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 216.195, 323.882 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 167.981, 395.88 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 232.514, 371.985 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 343.986, 347.963 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 375.994, 395.929 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 423.96, 324.081 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 424.013, 372.027 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2( 0.187561, 1.89691 )
@@ -132,6 +141,27 @@ polygon = PoolVector2Array( 338.447, 192.376, 367.289, 192.001, 367.954, 287.684
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 120.449, 253.669 )
+script = ExtResource( 6 )
 
 [node name="Player2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 312.958, 253.669 )
+
+[node name="Mate" type="Area2D" parent="."]
+position = Vector2( 168.634, 133.739 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Mate"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mate"]
+shape = SubResource( 3 )
+
+[node name="Background_Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -19.5
+autoplay = true
+
+[connection signal="body_entered" from="Mate" to="Mate" method="_on_Mate_body_entered"]

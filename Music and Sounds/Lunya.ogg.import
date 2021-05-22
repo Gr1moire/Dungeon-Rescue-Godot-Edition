@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Lunya.ogg-c767919a8d1ff6f582f5ead94881a917.oggstr"
+
+[deps]
+
+source_file="res://Music and Sounds/Lunya.ogg"
+dest_files=[ "res://.import/Lunya.ogg-c767919a8d1ff6f582f5ead94881a917.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

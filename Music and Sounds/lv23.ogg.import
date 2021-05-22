@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/lv23.ogg-424964fbfdac3fcee79832e91b456aac.oggstr"
+
+[deps]
+
+source_file="res://Music and Sounds/lv23.ogg"
+dest_files=[ "res://.import/lv23.ogg-424964fbfdac3fcee79832e91b456aac.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

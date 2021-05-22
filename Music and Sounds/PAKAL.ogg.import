@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/PAKAL.ogg-15f4af88097b67c60b3675b961f3bde3.oggstr"
+
+[deps]
+
+source_file="res://Music and Sounds/PAKAL.ogg"
+dest_files=[ "res://.import/PAKAL.ogg-15f4af88097b67c60b3675b961f3bde3.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

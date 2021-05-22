@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Levie.ogg-c85408f242470496c1e9bf9679eb044c.oggstr"
+
+[deps]
+
+source_file="res://Music and Sounds/Levie.ogg"
+dest_files=[ "res://.import/Levie.ogg-c85408f242470496c1e9bf9679eb044c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
