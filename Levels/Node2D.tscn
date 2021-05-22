@@ -3,7 +3,7 @@
 [ext_resource path="res://Tilesets/tile_map_world_trans.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 24.4717, 12.0096 )
+extents = Vector2( 23.8683, 12.0096 )
 
 [sub_resource type="TileSet" id=2]
 2/name = "tile_map_world_trans.png 2"
@@ -81,12 +81,6 @@ extents = Vector2( 24.4717, 12.0096 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PoolVector2Array( 302.875, 191.884, 302.875, 455.888, 464.013, 454.104, 463.418, 191.884, 447.364, 191.289, 370.065, 192.478, 367.092, 215.073, 418.228, 214.479, 445.58, 213.29, 444.985, 213.884, 418.228, 214.479, 415.852, 287.701, 449.038, 289.037, 449.148, 432.104, 318.335, 431.509, 319.166, 287.598, 366.788, 288.391, 367.687, 192.478 )
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PoolVector2Array( 112.602, 191.884, 111.413, 455.293, 271.956, 455.888, 271.361, 191.884, 177.414, 193.073, 175.63, 214.479, 207.144, 215.668, 208.495, 288.146, 256.158, 288.146, 256.496, 431.509, 125.683, 431.509, 127.646, 287.255, 175.755, 287.478, 176.225, 191.289 )
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 151.159, 323.882 )
 shape = SubResource( 1 )
@@ -96,28 +90,36 @@ position = Vector2( 216.195, 323.882 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 168.086, 395.599 )
+position = Vector2( 167.981, 395.88 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 231.785, 371.322 )
+position = Vector2( 232.514, 371.985 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 343.143, 347.963 )
+position = Vector2( 343.986, 347.963 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 376.143, 395.532 )
+position = Vector2( 375.994, 395.929 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 423.712, 323.585 )
+position = Vector2( 423.96, 324.081 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 424.509, 371.729 )
+position = Vector2( 424.013, 372.027 )
 shape = SubResource( 1 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2( 0.187559, 1.89691 )
+scale = Vector2( 0.997086, 0.996454 )
+polygon = PoolVector2Array( 144.79, 192.001, 175.824, 191.434, 175.864, 286.735, 127.934, 287.144, 127.997, 431.987, 257.005, 431.889, 256.972, 286.778, 209.218, 287.144, 208.549, 191.21, 272.099, 191.21, 273.27, 454.954, 112.577, 455.704, 112.577, 191.627 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PoolVector2Array( 338.447, 192.376, 367.289, 192.001, 367.954, 287.684, 320.047, 287.86, 319.871, 432.184, 448.153, 432.035, 448.04, 288.008, 416.135, 287.952, 416.079, 215.734, 400.043, 215.957, 399.877, 192.001, 461.308, 192.751, 463.93, 455.329, 303.985, 455.329, 305.484, 191.627 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
