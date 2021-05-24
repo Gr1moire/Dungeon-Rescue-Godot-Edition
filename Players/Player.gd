@@ -27,7 +27,7 @@ func _physics_process(delta):
 	else:
 		velocity.x = 0
 		velocity.y = 0
-		
+	print(test_move(get_transform(), velocity))
 	if velocity && !test_move(get_transform(), velocity):
 		move_and_collide(velocity)
 		

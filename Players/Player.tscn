@@ -6,19 +6,14 @@
 [ext_resource path="res://Players/Torch.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 2.59944, 2.60551 )
+extents = Vector2( 1.61656, 1.80959 )
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 120.396, 253.966 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -0.111359 )
 texture = ExtResource( 1 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.0525589, -0.297302 )
-shape = SubResource( 1 )
 
 [node name="Light2D" type="Light2D" parent="."]
 position = Vector2( 0.0524902, 0 )
@@ -30,6 +25,6 @@ shadow_enabled = true
 shadow_color = Color( 1, 1, 1, 0 )
 shadow_buffer_size = 3785
 script = ExtResource( 4 )
-__meta__ = {
-"_edit_lock_": true
-}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
