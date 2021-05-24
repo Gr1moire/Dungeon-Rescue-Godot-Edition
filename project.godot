@@ -39,7 +39,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Dungeon Rescue Godot Edition"
-run/main_scene="res://Levels/Node2D.tscn"
+run/main_scene="res://Levels/Level1.tscn"
 config/icon="res://icon.png"
 
 [autoload]
