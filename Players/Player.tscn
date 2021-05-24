@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Players/p2.png" type="Texture" id=1]
 [ext_resource path="res://Players/Player2.gd" type="Script" id=2]
 [ext_resource path="res://light.png" type="Texture" id=3]
+[ext_resource path="res://Players/Torch.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2.59944, 2.60551 )
@@ -23,10 +24,12 @@ shape = SubResource( 1 )
 position = Vector2( 0.0524902, 0 )
 scale = Vector2( 0.145263, 0.133733 )
 texture = ExtResource( 3 )
-color = Color( 0.894118, 0.858824, 0.858824, 1 )
-energy = 1.11
+color = Color( 0.905882, 0.752941, 0.666667, 1 )
+energy = 1.29
 shadow_enabled = true
 shadow_color = Color( 1, 1, 1, 0 )
+shadow_buffer_size = 3785
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_lock_": true
 }
