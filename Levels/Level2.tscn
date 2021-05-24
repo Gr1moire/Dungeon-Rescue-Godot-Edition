@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Levels/Level2.gd" type="Script" id=1]
 [ext_resource path="res://Players/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Music and Sounds/lv23.ogg" type="AudioStream" id=5]
 [ext_resource path="res://Levels/Mate2.gd" type="Script" id=6]
 [ext_resource path="res://Mates/mate2.png" type="Texture" id=7]
+[ext_resource path="res://light.png" type="Texture" id=8]
+[ext_resource path="res://UI/Turns_left.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24.0563, 11.992 )
@@ -18,7 +20,7 @@ extents = Vector2( 31.787, 23.8168 )
 extents = Vector2( 7.92581, 12.0035 )
 
 [sub_resource type="OccluderPolygon2D" id=4]
-polygon = PoolVector2Array( 79.3745, 227.139, 25.5737, 227.375, 24.9246, 264.241, 201.084, 264.191, 201.32, 216.23, 217.13, 215.994, 217.012, 263.955, 264.911, 264.106, 265.506, 215.646, 281.714, 216.02, 281.297, 178.561, 217.726, 178.645, 217.598, 168.829, 280.697, 168.63, 282.452, 11.3993, 121.909, 11.6966, 120.125, 83.9409, 105.26, 83.9409, 105.187, 12.2999, 73.0059, 11.9026, 73.4491, 0.696363, 296.723, 1.29097, 297.317, 286.701, 10.1238, 286.403, 11.0157, 0.399055, 56.2056, 0.399055, 56.8001, 11.6966, 25.5834, 11.9939, 25.5834, 144.59, 56.2055, 145.185, 55.6109, 167.483, 15.1779, 166.591, 13.6913, 216.537, 137.369, 216.537, 137.963, 167.78, 105.855, 167.483, 106.088, 144.914, 168.911, 144.313, 167.966, 132.305, 167.799, 118.957, 218.523, 119.791, 218.19, 131.805, 169.386, 132.242, 169.02, 179.385, 153.32, 179.562, 152.902, 227.867 )
+polygon = PoolVector2Array( 79.3745, 227.139, 25.5737, 227.375, 24.9246, 264.241, 201.084, 264.191, 201.32, 216.23, 217.13, 215.994, 217.012, 263.955, 233.132, 264.011, 232.853, 286.392, 248.958, 286.573, 249.017, 263.939, 264.792, 263.84, 265.506, 215.646, 281.714, 216.02, 281.297, 178.561, 217.726, 178.645, 217.598, 168.829, 280.697, 168.63, 282.452, 11.3993, 121.909, 11.6966, 120.125, 83.9409, 105.26, 83.9409, 106.323, 22.9108, 72.9921, 22.9108, 73.0148, 0.89703, 296.723, 1.29097, 297.317, 286.701, 249.041, 286.651, 10.1238, 286.403, 11.0157, 0.399055, 56.9689, 0.720053, 57.3002, 22.8518, 25.0905, 23.3237, 25.5834, 144.59, 56.2055, 145.185, 55.6109, 167.483, 15.1779, 166.591, 13.6913, 216.537, 137.369, 216.537, 137.963, 167.78, 105.855, 167.483, 106.088, 144.914, 168.911, 144.313, 167.966, 132.305, 167.799, 118.957, 218.523, 119.791, 218.19, 131.805, 169.386, 132.242, 169.02, 179.385, 153.32, 179.562, 152.902, 227.867 )
 
 [sub_resource type="OccluderPolygon2D" id=5]
 polygon = PoolVector2Array( 361.072, 287.016, 361.72, 263.94, 344.99, 264.312, 345.095, 227.313, 361.283, 227.102, 361.703, 216.381, 346.462, 216.381, 344.883, 82.9429, 360.967, 83.0988, 361.808, 72.3774, 344.99, 72.3774, 345.411, 24.1309, 360.967, 23.8156, 361.177, 0.1654, 330.571, 1.00321, 329.73, 287.512, 377.89, 287.437, 390.342, 286.95, 408.582, 286.67, 409.705, 0.161354, 377.434, 0.722584, 377.68, 35.0626, 393.447, 34.8524, 393.552, 168.45, 377.89, 168.45, 377.785, 179.276, 393.026, 179.276, 393.132, 264.207, 377.26, 264.207, 377.155, 286.701 )
@@ -30,6 +32,8 @@ polygon = PoolVector2Array( 185.315, 48.0473, 185.092, 83.3147, 249.198, 83.1289
 polygon = PoolVector2Array( 361.089, 119.918, 377.137, 120.042, 377.137, 131.402, 361.139, 131.303 )
 
 [sub_resource type="RectangleShape2D" id=8]
+
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 7.39072, 10 )
 
 [node name="Level2" type="Node2D"]
@@ -81,8 +85,16 @@ occluder = SubResource( 6 )
 [node name="LightOccluder2D4" type="LightOccluder2D" parent="StaticBody2D"]
 occluder = SubResource( 7 )
 
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 65.4837, -10.2035 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 369.141, -10.2035 )
+shape = SubResource( 8 )
+
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 238.625, 252.479 )
+position = Vector2( 238.678, 252.182 )
 script = ExtResource( 4 )
 
 [node name="Player2" parent="." instance=ExtResource( 2 )]
@@ -99,7 +111,25 @@ __meta__ = {
 texture = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mate2"]
-shape = SubResource( 8 )
+shape = SubResource( 9 )
+
+[node name="Light2D" type="Light2D" parent="Mate2"]
+position = Vector2( 0.0524902, 0 )
+scale = Vector2( 0.145263, 0.133733 )
+texture = ExtResource( 8 )
+texture_scale = 0.42
+color = Color( 0.894118, 0.858824, 0.858824, 1 )
+energy = 1.07
+shadow_enabled = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Turns_left" parent="." instance=ExtResource( 9 )]
+margin_left = 109.507
+margin_top = 329.663
+margin_right = 149.507
+margin_bottom = 343.663
 
 [node name="Background_Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )

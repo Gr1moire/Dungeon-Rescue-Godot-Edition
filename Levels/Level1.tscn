@@ -1,23 +1,25 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Levels/Level_End.gd" type="Script" id=1]
 [ext_resource path="res://Mates/Mate1.gd" type="Script" id=2]
 [ext_resource path="res://Players/Player.gd" type="Script" id=3]
 [ext_resource path="res://Mates/Mate1.png" type="Texture" id=4]
+[ext_resource path="res://light.png" type="Texture" id=5]
 [ext_resource path="res://Music and Sounds/lvl1tuto.ogg" type="AudioStream" id=6]
 [ext_resource path="res://Players/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Levels/Level1.tres" type="TileSet" id=8]
 [ext_resource path="res://Levels/level1.gd" type="Script" id=9]
+[ext_resource path="res://UI/Turns_left.tscn" type="PackedScene" id=10]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 23.864, 11.8314 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 17.578, 7.29833 )
 
-[sub_resource type="OccluderPolygon2D" id=6]
+[sub_resource type="OccluderPolygon2D" id=3]
 cull_mode = 2
-polygon = PoolVector2Array( 94.9619, 132.99, 125.529, 132.99, 144.171, 132.99, 143.941, 147.334, 94.3236, 146.787 )
+polygon = PoolVector2Array( 94.761, 135.139, 142.304, 135.139, 142.317, 146.905, 94.3236, 146.787 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 16.7905, 11.7856 )
@@ -41,42 +43,42 @@ tile_data = PoolIntArray( 458757, 2, 0, 458758, 2, 0, 458759, 2, 0, 458760, 2, 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map"]
 visible = false
 position = Vector2( 151.159, 323.882 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Map"]
 visible = false
 position = Vector2( 216.195, 323.882 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Map"]
 visible = false
 position = Vector2( 167.981, 395.88 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Map"]
 visible = false
 position = Vector2( 232.514, 371.985 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Map"]
 visible = false
 position = Vector2( 343.986, 347.963 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Map"]
 visible = false
 position = Vector2( 375.994, 395.929 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Map"]
 visible = false
 position = Vector2( 423.96, 324.081 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Map"]
 visible = false
 position = Vector2( 424.013, 372.027 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Map"]
 visible = false
@@ -91,48 +93,48 @@ polygon = PoolVector2Array( 338.447, 192.376, 367.289, 192.001, 367.954, 287.684
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Map"]
 visible = false
 position = Vector2( 192.104, 184.848 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Map"]
 visible = false
 position = Vector2( 384.613, 184.848 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Map"]
-position = Vector2( 31.9257, 189.093 )
-occluder = SubResource( 6 )
+position = Vector2( 33.7798, 176.644 )
+occluder = SubResource( 3 )
 
 [node name="LightOccluder2D3" type="LightOccluder2D" parent="Map"]
-position = Vector2( 112.493, 237.703 )
-occluder = SubResource( 6 )
+position = Vector2( 113.817, 224.857 )
+occluder = SubResource( 3 )
 
 [node name="LightOccluder2D4" type="LightOccluder2D" parent="Map"]
-position = Vector2( 95.5653, 189.093 )
-occluder = SubResource( 6 )
+position = Vector2( 97.5518, 176.644 )
+occluder = SubResource( 3 )
 
 [node name="LightOccluder2D2" type="LightOccluder2D" parent="Map"]
-position = Vector2( 49.6467, 261.348 )
-occluder = SubResource( 6 )
+position = Vector2( 49.6467, 248.764 )
+occluder = SubResource( 3 )
 
 [node name="LightOccluder2D5" type="LightOccluder2D" parent="Map"]
 position = Vector2( 256.289, 261.348 )
-occluder = SubResource( 6 )
+occluder = SubResource( 3 )
 
 [node name="LightOccluder2D8" type="LightOccluder2D" parent="Map"]
 position = Vector2( 449.97, 950.814 )
-occluder = SubResource( 6 )
+occluder = SubResource( 3 )
 
 [node name="LightOccluder2D9" type="LightOccluder2D" parent="Map"]
 position = Vector2( 304.554, 189.093 )
-occluder = SubResource( 6 )
+occluder = SubResource( 3 )
 
 [node name="LightOccluder2D7" type="LightOccluder2D" parent="Map"]
 position = Vector2( 304.554, 237.703 )
-occluder = SubResource( 6 )
+occluder = SubResource( 3 )
 
 [node name="LightOccluder2D6" type="LightOccluder2D" parent="Map"]
 position = Vector2( 224.985, 213.662 )
-occluder = SubResource( 6 )
+occluder = SubResource( 3 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Map"]
 color = Color( 0.701961, 0.713726, 0.733333, 1 )
@@ -169,6 +171,28 @@ texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mate"]
 shape = SubResource( 5 )
+
+[node name="Light2D" type="Light2D" parent="Mate"]
+position = Vector2( 0.0524902, 0 )
+scale = Vector2( 0.145263, 0.133733 )
+texture = ExtResource( 5 )
+texture_scale = 0.42
+color = Color( 0.894118, 0.858824, 0.858824, 1 )
+energy = 1.07
+shadow_enabled = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Turns_left" parent="." instance=ExtResource( 10 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 112.449
+margin_top = 331.5
+margin_right = 189.449
+margin_bottom = 345.5
 
 [node name="Background_Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
