@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Levels/Level_End.gd" type="Script" id=1]
 [ext_resource path="res://Mates/Mate1.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Levels/Level1.tres" type="TileSet" id=8]
 [ext_resource path="res://Levels/level1.gd" type="Script" id=9]
 [ext_resource path="res://UI/Turns_left.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Players/Torch.gd" type="Script" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 23.864, 11.8314 )
@@ -180,6 +181,7 @@ texture_scale = 0.42
 color = Color( 0.894118, 0.858824, 0.858824, 1 )
 energy = 1.07
 shadow_enabled = true
+script = ExtResource( 11 )
 __meta__ = {
 "_edit_lock_": true
 }
