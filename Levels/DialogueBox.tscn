@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Levels/DialogueBox.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( 0, 50 )
+scale = Vector2( 1, 0.875 )
+color = Color( 0.168627, 0.152941, 0.152941, 0.862745 )
+polygon = PoolVector2Array( 48, 400, 48, 320, 576, 320, 576, 400 )
+
+[node name="Dialogue" type="RichTextLabel" parent="Polygon2D"]
+margin_left = 80.0
+margin_top = 342.857
+margin_right = 544.0
+margin_bottom = 379.857
+bbcode_enabled = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharacterName" type="RichTextLabel" parent="Polygon2D"]
+margin_left = 90.0
+margin_top = 326.0
+margin_right = 307.0
+margin_bottom = 338.0
+bbcode_enabled = true
+bbcode_text = "Pakal"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="Polygon2D"]
+wait_time = 0.05
+autostart = true
+
+[connection signal="timeout" from="Polygon2D/Timer" to="Polygon2D/Dialogue" method="_on_Timer_timeout"]
