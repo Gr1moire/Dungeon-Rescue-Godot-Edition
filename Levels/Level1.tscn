@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Levels/Level_End.gd" type="Script" id=1]
 [ext_resource path="res://Mates/Mate1.gd" type="Script" id=2]
@@ -20,7 +20,13 @@ extents = Vector2( 17.578, 7.29833 )
 
 [sub_resource type="OccluderPolygon2D" id=3]
 cull_mode = 2
-polygon = PoolVector2Array( 94.761, 135.139, 142.304, 135.139, 142.317, 146.905, 94.3236, 146.787 )
+polygon = PoolVector2Array( 94.761, 135.139, 142.304, 135.139, 142.317, 146.905, 116.94, 146.843, 94.3236, 146.787 )
+
+[sub_resource type="OccluderPolygon2D" id=6]
+polygon = PoolVector2Array( 112.056, 191.122, 112.056, 455.122, 272.056, 455.122, 272.056, 191.122, 208.056, 191.122, 208.056, 215.122, 208.056, 287.122, 256.056, 287.122, 256.056, 263.122, 224.056, 263.122, 224.056, 215.122, 256.056, 215.122, 256.056, 431.122, 144.056, 431.122, 144.056, 431.122, 144.056, 431.122, 128.056, 431.122, 128.056, 215.122, 160.056, 215.122, 160.056, 263.122, 128.056, 263.122, 128.056, 287.122, 176.056, 287.122, 176.056, 191.122, 208.056, 191.122, 208.056, 167.122, 176.056, 167.122, 176.056, 191.122 )
+
+[sub_resource type="OccluderPolygon2D" id=7]
+polygon = PoolVector2Array( 304.056, 191.122, 304.056, 455.122, 464.056, 455.122, 464.056, 191.122, 400.056, 191.122, 400.056, 215.122, 448.056, 215.122, 448.056, 263.122, 416.056, 263.122, 416.056, 287.122, 448.056, 287.122, 448.056, 431.122, 320.056, 431.122, 320.056, 215.122, 352.056, 215.122, 352.056, 263.122, 320.056, 263.122, 320.056, 287.122, 368.056, 287.122, 368.056, 191.122, 400.056, 191.122, 400.056, 167.122, 368.056, 167.122, 368.056, 191.122 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 16.7905, 11.7856 )
@@ -139,6 +145,12 @@ occluder = SubResource( 3 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Map"]
 color = Color( 0.701961, 0.713726, 0.733333, 1 )
+
+[node name="LightOccluder2D10" type="LightOccluder2D" parent="Map"]
+occluder = SubResource( 6 )
+
+[node name="LightOccluder2D11" type="LightOccluder2D" parent="Map"]
+occluder = SubResource( 7 )
 
 [node name="Level_End" type="Area2D" parent="."]
 position = Vector2( 110.552, 61 )
