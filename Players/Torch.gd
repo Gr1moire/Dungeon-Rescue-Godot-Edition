@@ -9,7 +9,7 @@ func _ready():
 	value = randi() % MAX_VALUE
 	noise.period = 16
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	value += 0.5
 	if (value > MAX_VALUE):
 		value = 0.0
