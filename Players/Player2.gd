@@ -5,7 +5,7 @@ var velocity = Vector2.ZERO
 enum {LEFT, RIGHT, UP, DOWN, IDLE}
 
 var can_move = true
-var allow_move = true
+var allow_move = false
 var direction = IDLE
 var counter_x = 0
 var counter_y = 0

@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Levels/DialogueBox.gd" type="Script" id=1]
 
-[node name="Node2D" type="Node2D"]
+[node name="DialogueBox" type="Node2D"]
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 position = Vector2( 0, 50 )
@@ -12,9 +12,9 @@ polygon = PoolVector2Array( 48, 400, 48, 320, 576, 320, 576, 400 )
 
 [node name="Dialogue" type="RichTextLabel" parent="Polygon2D"]
 margin_left = 80.0
-margin_top = 342.857
+margin_top = 348.3
 margin_right = 544.0
-margin_bottom = 379.857
+margin_bottom = 385.3
 bbcode_enabled = true
 script = ExtResource( 1 )
 __meta__ = {
@@ -22,12 +22,11 @@ __meta__ = {
 }
 
 [node name="CharacterName" type="RichTextLabel" parent="Polygon2D"]
-margin_left = 90.0
-margin_top = 326.0
-margin_right = 307.0
-margin_bottom = 338.0
+margin_left = 89.2063
+margin_top = 327.814
+margin_right = 306.206
+margin_bottom = 339.814
 bbcode_enabled = true
-bbcode_text = "Pakal"
 __meta__ = {
 "_edit_use_anchors_": false
 }
