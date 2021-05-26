@@ -4,7 +4,7 @@
 [ext_resource path="res://Menu/Menu.gd" type="Script" id=2]
 [ext_resource path="res://Menu/title_screen_img.png" type="Texture" id=3]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 40
 font_data = ExtResource( 1 )
 
@@ -22,7 +22,7 @@ __meta__ = {
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 958.0
-margin_bottom = 670.0
+margin_bottom = 669.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="Background Image" type="Sprite" parent="."]
@@ -32,17 +32,15 @@ texture = ExtResource( 3 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 margin_right = 958.0
-margin_bottom = 670.0
+margin_bottom = 669.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 margin_left = 479.0
-margin_top = 335.0
+margin_top = 334.0
 margin_right = 479.0
-margin_bottom = 335.0
+margin_bottom = 334.0
 
 [node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
-anchor_left = -0.032
-anchor_right = -0.032
 use_top_left = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2"]
@@ -63,7 +61,7 @@ margin_bottom = 38.0
 margin_right = 13.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 13, 0 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = ">"
 
@@ -71,7 +69,7 @@ text = ">"
 margin_left = 17.0
 margin_right = 110.0
 margin_bottom = 38.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Tutorial"
 
@@ -88,7 +86,7 @@ margin_bottom = 38.0
 margin_right = 13.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 13, 0 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = ">"
 
@@ -97,7 +95,7 @@ margin_left = 17.0
 margin_right = 110.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 93, 0 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Start"
 
@@ -114,7 +112,7 @@ margin_bottom = 38.0
 margin_right = 13.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 13, 0 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = ">"
 
@@ -123,6 +121,6 @@ margin_left = 17.0
 margin_right = 110.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 93, 0 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Exit"
