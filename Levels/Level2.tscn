@@ -42,6 +42,7 @@ extents = Vector2( 7.39072, 10 )
 extents = Vector2( 8.51594, 12.1497 )
 
 [node name="Level2" type="Node2D"]
+position = Vector2( 0, -1 )
 script = ExtResource( 1 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
