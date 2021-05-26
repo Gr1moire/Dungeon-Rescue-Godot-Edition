@@ -6,9 +6,9 @@ enum {LEFT, RIGHT, UP, DOWN, IDLE}
 
 var can_move = true
 var allow_move = false
-var direction = IDLE
 var counter_x = 0
 var counter_y = 0
+var direction = IDLE
 
 func _physics_process(_delta):
 	if can_move:
