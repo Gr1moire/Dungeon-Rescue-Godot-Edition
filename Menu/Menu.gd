@@ -48,10 +48,8 @@ func reset_label():
 
 func make_selection():
 	if selection == 0:
-		get_parent().add_child(tutorial_scene.instance())
-		queue_free()
+		get_tree().change_scene("res://Levels/Tutorial.tscn")
 	if selection == 1:
-		get_parent().add_child(level1_scene.instance())
-		queue_free()
+		get_tree().change_scene("res://Levels/Level1.tscn")
 	if selection == 2:
 		get_tree().quit()

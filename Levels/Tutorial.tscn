@@ -1,15 +1,17 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Levels/Level1.tres" type="TileSet" id=1]
 [ext_resource path="res://Players/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Levels/DarkEffect.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Levels/Tutorial.gd" type="Script" id=4]
+[ext_resource path="res://Levels/Tutorial_end.gd" type="Script" id=5]
 [ext_resource path="res://UI/Turns_left.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Players/Player.gd" type="Script" id=7]
 [ext_resource path="res://Mates/Mate0.png" type="Texture" id=8]
 [ext_resource path="res://Mates/Mate0.gd" type="Script" id=9]
 [ext_resource path="res://light.png" type="Texture" id=10]
 [ext_resource path="res://Music and Sounds/lvl1tuto.ogg" type="AudioStream" id=11]
+[ext_resource path="res://addons/dialogic/Other/DialogicClass.gd" type="Script" id=12]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( 288, 312, 208, 312, 208, 144, 240, 144, 240, 120, 256, 120, 256, 144, 240, 144, 240, 168, 224, 168, 224, 216, 240, 216, 240, 240, 224, 240, 224, 288, 272, 288, 272, 168, 256, 168, 256, 144, 288, 144 )
@@ -22,33 +24,6 @@ polygon = PoolVector2Array( 352, 240, 352, 216, 368, 216, 368, 240 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 6, 12 )
-
-[sub_resource type="GDScript" id=5]
-script/source = "extends Area2D
-
-var P1_Entered = false
-var P2_Entered = false
-
-var scene = Dialogic.start(\"tutorial\")
-
-func _on_Level_End_body_entered(body):
-	if body == get_node(\"../Player\"):
-		P1_Entered = true
-	if body == get_node(\"../Player2\"):
-		P2_Entered = true
-	if (P1_Entered && P2_Entered):
-		scene.connect(\"timeline_end\", self, \"after_dialog\")
-		get_parent().add_child(scene)
-
-func _on_Level_End_body_exited(body):
-	if body == get_node(\"../Player\"):
-		P1_Entered = false
-	if body == get_node(\"../Player2\"):
-		P2_Entered = false
-		
-func after_dialog(_timeline_name):
-	get_tree().change_scene(\"res://Levels/Level1.tscn\")
-"
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 8, 12 )
@@ -127,14 +102,14 @@ margin_top = 71.0
 margin_right = 356.0
 margin_bottom = 85.0
 
-[node name="Level_End" type="Area2D" parent="."]
-script = SubResource( 5 )
+[node name="Tutorial_end" type="Area2D" parent="."]
+script = ExtResource( 5 )
 
-[node name="First Door" type="CollisionShape2D" parent="Level_End"]
+[node name="First Door" type="CollisionShape2D" parent="Tutorial_end"]
 position = Vector2( 248, 156 )
 shape = SubResource( 6 )
 
-[node name="Second Door" type="CollisionShape2D" parent="Level_End"]
+[node name="Second Door" type="CollisionShape2D" parent="Tutorial_end"]
 position = Vector2( 360, 156 )
 shape = SubResource( 7 )
 
@@ -143,6 +118,9 @@ stream = ExtResource( 11 )
 volume_db = -19.5
 autoplay = true
 
+[node name="Dialogic" type="Node" parent="."]
+script = ExtResource( 12 )
+
 [connection signal="body_entered" from="Mate" to="Mate" method="_on_Mate_body_entered"]
-[connection signal="body_entered" from="Level_End" to="Level_End" method="_on_Level_End_body_entered"]
-[connection signal="body_exited" from="Level_End" to="Level_End" method="_on_Level_End_body_exited"]
+[connection signal="body_entered" from="Tutorial_end" to="Tutorial_end" method="_on_Tutorial_end_body_entered"]
+[connection signal="body_exited" from="Tutorial_end" to="Tutorial_end" method="_on_Tutorial_end_body_exited"]
