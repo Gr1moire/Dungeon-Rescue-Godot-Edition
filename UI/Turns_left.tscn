@@ -3,14 +3,14 @@
 [ext_resource path="res://UI/Turns_left.gd" type="Script" id=1]
 
 [node name="Turns_left" type="Control"]
-anchor_left = 0.265
-anchor_top = 0.882
-anchor_right = 0.265
-anchor_bottom = 0.882
-margin_left = -0.150009
-margin_top = -0.138
-margin_right = 76.85
-margin_bottom = 13.862
+anchor_left = 0.443
+anchor_top = 0.072
+anchor_right = 0.443
+anchor_bottom = 0.072
+margin_left = 0.0239868
+margin_top = 0.175999
+margin_right = 77.024
+margin_bottom = 14.176
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true,
@@ -18,7 +18,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_right = 40.0
+anchor_left = 0.208
+anchor_right = 0.208
+margin_left = -0.0160084
+margin_right = 27.984
 margin_bottom = 14.0
 text = "TEST"
 __meta__ = {
