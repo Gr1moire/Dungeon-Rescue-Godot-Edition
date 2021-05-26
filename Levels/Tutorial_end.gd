@@ -3,12 +3,12 @@ extends Area2D
 var P1_Entered = false
 var P2_Entered = false
 
-var scene = Dialogic.start("level1")
+var scene = Dialogic.start("tutorial")
 		
 func after_dialog(_timeline_name):
-	get_tree().change_scene("res://Levels/Level2.tscn")
+	get_tree().change_scene("res://Levels/Level1.tscn")
 
-func _on_Level_End_body_entered(body):
+func _on_Tutorial_end_body_entered(body):
 	if body == get_node("../Player"):
 		P1_Entered = true
 	if body == get_node("../Player2"):
@@ -17,7 +17,7 @@ func _on_Level_End_body_entered(body):
 		scene.connect("timeline_end", self, "after_dialog")
 		get_parent().add_child(scene)
 
-func _on_Level_End_body_exited(body):
+func _on_Tutorial_end_body_exited(body):
 	if body == get_node("../Player"):
 		P1_Entered = false
 	if body == get_node("../Player2"):
