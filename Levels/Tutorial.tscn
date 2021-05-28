@@ -25,10 +25,10 @@ polygon = PoolVector2Array( 352, 240, 352, 216, 368, 216, 368, 240 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 6, 12 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 8, 12 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 8, 12 )
 
 [node name="Tutorial" type="Node2D"]
@@ -107,11 +107,11 @@ script = ExtResource( 5 )
 
 [node name="First Door" type="CollisionShape2D" parent="Tutorial_end"]
 position = Vector2( 248, 156 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="Second Door" type="CollisionShape2D" parent="Tutorial_end"]
 position = Vector2( 360, 156 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="Background Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )

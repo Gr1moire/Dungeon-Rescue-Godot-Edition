@@ -7,9 +7,9 @@ anchor_left = 0.443
 anchor_top = 0.072
 anchor_right = 0.443
 anchor_bottom = 0.072
-margin_left = 0.0239868
-margin_top = 0.175999
-margin_right = 77.024
+margin_left = 0.0240479
+margin_top = 0.176001
+margin_right = 77.0241
 margin_bottom = 14.176
 script = ExtResource( 1 )
 __meta__ = {
@@ -25,5 +25,13 @@ margin_right = 27.984
 margin_bottom = 14.0
 text = "TEST"
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
+
+[node name="Label2" type="Label" parent="."]
+margin_left = -8.00003
+margin_top = 14.0
+margin_right = 97.0
+margin_bottom = 28.0
+text = "R pour recharger"

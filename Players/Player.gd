@@ -40,6 +40,8 @@ func _physics_process(_delta):
 			emit_signal("movement_made")
 			direction = DOWN
 			can_move = false
+		elif Input.is_action_just_released("ui_end"):
+			get_tree().reload_current_scene()
 
 		else:
 			velocity.x = 0
